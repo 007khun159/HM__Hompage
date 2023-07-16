@@ -1,62 +1,95 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
 
-
 *,
 *::before,
-*::after
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-    background-color: var(hsl(233, 8%, 79%));
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  /* background-color: var(--grayish-blue); */
 }
 
-:root{
-    --soft-orange:hsl(35, 77%, 62%);
-    --soft-red:hsl(5, 85%, 63%);
-    --off-white:hsl(36, 100%, 99%);
-    --grayish-blue: hsl(233, 8%, 79%)
-    --dark-grayish-blue: hsl(236, 13%, 42%)
-    --very-dark-blue: hsl(240, 100%, 5%)
+:root {
+  --soft-orange: hsl(35, 77%, 62%);
+  --soft-red: hsl(5, 85%, 63%);
+  --off-white: hsl(36, 100%, 99%);
+  --grayish-blue: hsl(233, 8%, 79%);
+  --dark-grayish-blue: hsl(236, 13%, 42%);
+  --very-dark-blue: hsl(240, 100%, 5%);
 }   
 
-
-.container{
-    margin:auto;
-    max-width: 1440px;
-    padding: 40px 200px;
-    font-weight: 400;
-    
-
-    
+.container {
+  margin: auto;
+  max-width: 1440px;
+  padding: 40px 200px;
+  font-weight: 400;
 }
 
-nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
+/* Navbar */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--dark-grayish-blue);
+  font-size: 14px;
+  margin-right: 20px;
+}
+
+nav a:hover {
+  color: var(--soft-orange);
+}
+
+nav a:last-child {
+  margin-right: 0;
+}
+
+/* Hero-Section */
+.mobile_img {
+  display: none;
+}
+
+.hero-section {
+  display: grid;
+  grid-gap: 50px;
+}
+
+.first-section {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas:
+    "hero-img hero-img hero-img news"
+    "hero-img hero-img hero-img news"
+    "intro intro intro news";
 }
 
 
-nav a{
-    text-decoration: none;
-    color: var( --dark-grayish-blue);
-    font-size: 14px;
-    margin-right: 20px;
-
+.hero-img{
+    grid-area: hero-img;
 }
 
 
-nav a:hover{
-    color: var(--soft-orange);
+.hero-img img {
+    width: 100%;
+}
+  
 
+
+.news {
+    grid-area: news;
+    background-color: aqua;
+}
+  
+
+
+
+
+.intro{
+    grid-area: intro;
 }
 
-
-nav a:last-child{
-    margin-right: 0;
-
-
-}
