@@ -2,6 +2,10 @@ import './styles/style.css'
 import Logo from './assets/images/logo.svg'
 import Desktop_Web from './assets/images/image-web-3-desktop.jpg'
 import Mobile_Web from './assets/images/image-web-3-mobile.jpg'
+import Retro  from './assets/images/image-retro-pcs.jpg'
+import Laptop  from './assets/images/image-top-laptops.jpg'
+import Gamming  from './assets/images/image-gaming-growth.jpg'
+
 
 function App() {
   return (
@@ -41,21 +45,62 @@ function App() {
             </div>
             <aside className='news'>
               <h2>New</h2>
-              <div className="card">
+              <div className="card card_padding">
                 <h3>Hydrogen VS Electric Cars</h3>
                 <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
               </div>
-              <div className="card">
+              <div className="card card_padding">
                 <h3>The Downsides of AI Artistry</h3>
                 <p>What are the possible adverse effects of on-demand AI image generation?</p>
               </div>
-              <div className="card">
+              <div className="card card_padding">
                 <h3>Is VC Funding Drying Up?</h3>
                 <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
               </div>
             </aside>
           </div>
-          <div className="second-section">Second-section-Section</div>
+
+          <div className="second-section">
+
+            <section className='popular'>
+
+                <img src={Retro}/>
+                <div className="content">
+                  <span>01</span>
+                  <h3>Reviving Retro PCs</h3>
+                  <p>What happens when old PCs are given modern upgrades?</p>
+
+                </div>
+
+            </section>
+
+            <section className='popular'>
+
+                <img src={Laptop}/>
+                <div className="content">
+                  <span>02</span>
+                  <h3>Top 10 Laptops of 2022</h3>
+                  <p>Our best picks for various needs and budgets.</p>
+
+                </div>
+
+            </section>
+
+            <section className='popular'>
+
+                <img src={Gamming}/>
+                <div className="content">
+                  <span>03</span>
+                  <h3>The Growth of Gaming</h3>
+                  <p>How the pandemic has sparked fresh opportunities.</p>
+
+                </div>
+
+            </section>
+            
+
+
+          </div>
         </section>
       </div>
     </div>
