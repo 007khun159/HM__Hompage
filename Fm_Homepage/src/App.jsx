@@ -6,6 +6,10 @@ import Retro  from './assets/images/image-retro-pcs.jpg'
 import Laptop  from './assets/images/image-top-laptops.jpg'
 import Gamming  from './assets/images/image-gaming-growth.jpg'
 
+// Mobile import
+import OPENING  from './assets/images/icon-menu.svg'
+import CLOSSING  from './assets/images/icon-menu-close.svg'
+
 
 function App() {
   return (
@@ -16,13 +20,16 @@ function App() {
             <div className="logo">
               <img src={Logo} alt="Logo" />
             </div>
-            <div className="links">
+            <div className="links active">
               <a href='#'>Home</a>
               <a href='#'>New</a>
               <a href='#'>Popular</a>
               <a href='#'>Tending</a>
               <a href='#'>Catagories</a>
             </div>
+            <img className = 'icon-menu menu-open active' src={OPENING} alt='icon-menu'/>
+            <img className = 'icon-menu menu-close active'  src={CLOSSING} alt='icon-menu-close'/>
+            <div className="backdrop active"></div>
           </nav>
         </header>
 
@@ -75,7 +82,7 @@ function App() {
             </section>
 
             <section className='popular'>
-
+  
                 <img src={Laptop}/>
                 <div className="content">
                   <span>02</span>
