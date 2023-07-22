@@ -50,13 +50,18 @@ nav a:last-child {
 }
 
 /*Mobile navbar*/
+
 .icon-menu{
   display: none;
   cursor: pointer;
+
 }
+
 .backdrop{
   display: none;
+
 }
+
 /*-------------*/
 
 
@@ -240,5 +245,58 @@ nav a:last-child {
 
 /* Responsive Mobile*/
 @media screen and (max-width:376px) {
-  
+  .container{
+    overflow: hidden;
+    padding: 30px 20px;
+  }
+
+  nav .links{
+    position: fixed;
+    width: 200px;
+    top: 0;
+    right: -200px;
+    /*ปรับ size เป็นแนวตั้ง*/
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 200px;
+    padding-left: 30px;
+    background-color:rgb(220, 220, 220);
+    z-index: 99;
+
+  }
+  nav{
+    position: sticky;
+  }
+
+  /*ปุ่มเปิดปิด navbar*/
+  /*ต้องชิดกันเดี๊ยวหาย + ต้องเติม class active ลงไปด้วย*/
+  nav .links.active{
+    right: 0;
+  }
+
+
+  .menu-open{
+    display: inline-block;
+  }
+
+  .menu-open.active{
+    display: none;
+  }
+
+
+  .menu-close{
+    display: none;
+  }
+
+
+  .menu-close.active{
+    display: inline-block;
+    z-index: 100;
+  }
+
+  nav .links a{
+    margin-bottom: 30px;
+
+  }
 }
