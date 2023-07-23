@@ -193,6 +193,7 @@ nav a:last-child {
 .second-section{
   display: flex;
   justify-content: space-between;
+  
 }
 
 .popular{
@@ -261,10 +262,26 @@ nav a:last-child {
     flex-direction: column;
     padding-top: 200px;
     padding-left: 30px;
-    background-color:rgb(220, 220, 220);
+    background-color:var(--off-white);
     z-index: 99;
 
   }
+
+  .backdrop{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: black;
+    opacity: 0.2;
+    height: 100vh;
+    width: 100vw;
+    z-index: 98;
+  }
+  .backdrop.active{
+    display: block;
+  }
+
   nav{
     position: sticky;
   }
@@ -299,4 +316,47 @@ nav a:last-child {
     margin-bottom: 30px;
 
   }
+
+  .first-section{
+    grid-template-areas:
+    "hero-img"
+    "intro"
+    "news";
+  }
+
+  .desktop_img{
+    display: none;
+  }
+
+
+  .mobile_img{
+    display: block;
+  }
+  
+  .intro{
+    flex-direction: column;
+  }
+
+  .intro h1{
+    font-size: 40px;
+    margin-bottom: 15px;
+  }
+
+
+  .intro .description{
+    line-height: 1.6;
+  }
+  .second-section{
+    flex-direction: column;
+  }
+
+  .popular{
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .popular h3{
+    margin: 5px 0px;
+  }
+
 }

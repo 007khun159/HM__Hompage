@@ -11,6 +11,10 @@ import OPENING  from './assets/images/icon-menu.svg'
 import CLOSSING  from './assets/images/icon-menu-close.svg'
 
 
+// script
+
+import './scripts/main'
+
 function App() {
   return (
     <div>
@@ -29,7 +33,7 @@ function App() {
             </div>
             <img className = 'icon-menu menu-open active' src={OPENING} alt='icon-menu'/>
             <img className = 'icon-menu menu-close active'  src={CLOSSING} alt='icon-menu-close'/>
-            <div className="backdrop  active"></div>
+            <div className="backdrop active"></div>
           </nav>
         </header>
 
